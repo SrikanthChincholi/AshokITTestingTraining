@@ -9,6 +9,11 @@ public class ArraysToList {
 
 	public static void main(String[] args) {
 
+		test();
+
+	}
+
+	public static void test() {
 		int[] input = new int[] { 10, 20, 30, 40 };
 		List<Integer> output = new ArrayList<>();
 		for (Integer l : input) {
@@ -19,7 +24,6 @@ public class ArraysToList {
 		while (itr.hasNext()) {
 			System.out.println(itr.next());
 		}
-
 	}
 
 }
