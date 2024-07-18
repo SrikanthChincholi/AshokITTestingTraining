@@ -21,7 +21,7 @@ public class Employee {
 	
 
 	public void totalsalary() {
-		float totalsal = (bonus.sal * bonus.bonustoemp);
+		float totalsal = (bonus.sal + bonus.bonustoemp);
 		System.out.println("Total salary after bonus : " + totalsal);
 	}
 
