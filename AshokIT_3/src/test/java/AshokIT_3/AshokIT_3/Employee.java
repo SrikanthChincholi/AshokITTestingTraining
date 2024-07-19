@@ -11,7 +11,7 @@ public class Employee {
 		this.name = name;
 		this.empno = empno;
 		this.designation = designation;
-		Employee.bonus = bonus;
+		this.bonus = bonus;
 	}
 
 	public static void main(String[] args) {
