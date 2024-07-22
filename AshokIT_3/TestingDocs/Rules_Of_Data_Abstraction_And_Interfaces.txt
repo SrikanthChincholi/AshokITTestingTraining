@@ -1,0 +1,30 @@
+Data Abstraction Rules
+-----------------------------------------------------
+If anyone of the method is marked as abstract then class should be declared as abstract
+
+abstract classes can have concrete and abstract methods
+
+We cannot create object for abstract classes
+
+We can create constructor for abstract classes
+
+methods declared as private, final, static along with abstract is invalid combination
+
+
+Rules of Interfaces
+------------------------------------------------------
+interface can have only methods with public, private, abstract, default, static and strictfp
+ 
+interfaces cannot have methods declared as private, final, static along with abstract
+
+We cannot create object for interfaces
+
+We cannot create constructor for interfaces
+
+We cannot override interface variables as they are defined as final
+
+
+Interfaces vs abstract classes
+
+extends vs implements 
+

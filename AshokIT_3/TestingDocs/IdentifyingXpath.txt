@@ -1,0 +1,57 @@
+Xpath - XML path identification
+
+-- Absolute Xpath
+/root/parent/child/ so on..
+
+--Relative Xpath
+//tagname[@attribute1 = 'value']
+
+--Xpath
+//tagname[@attribute1 = 'value']
+
+-Using Conditions (AND & OR)
+--And
+//tagname[@att= 'value and @att2='value']
+
+--Or
+//tagname[@att= 'value or @att2='value']
+
+--Indexes 
+(//tagname[@att= 'value'])[index]
+
+--methods of xpath
+Text
+//tagname[text()='innerText']
+
+Contains
+//tagname[contains(@attr,'substring')]
+
+Contains using text()
+//tagname[contains(text(),'innerText')]
+
+Start-with
+//tagname[starts-with(@attr,'value')]
+
+Normalize-space
+//tagname[text()[normalize-space()='value']]
+
+Last()
+//tagname[@attr='value'][last()]
+
+Position()
+//tagname[@attr='value'][position()]
+
+indexes
+//tagname[@attr='value'][index]
+(//tagname[@attr='value'])[index]
+//tagname[@attr='value'][position()=index]
+
+Not()
+//tagname[not(contains(text(),'value'))]
+
+
+
+
+
+
+

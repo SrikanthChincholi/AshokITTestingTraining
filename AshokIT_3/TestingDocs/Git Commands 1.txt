@@ -1,0 +1,37 @@
+Git Commands
+
+git init
+
+git add .
+
+git commit -m "msg"
+
+git push origin master <remote repo>
+
+git push -u -f origin master
+
+git status 
+
+git log
+
+git pull origin master
+
+git fetch
+
+Create new branch
+------------------
+
+git branch <branch name>
+
+git checkout <branch name>
+
+git push -u -f <branch name>
+
+git checkout master
+
+git merge test
+
+git branch -d <branch name>  ---> delete from local
+
+git push origin --delete <branch name> ---> delete from remote
+

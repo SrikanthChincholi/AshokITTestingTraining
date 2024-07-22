@@ -1,0 +1,53 @@
+Id
+#attributeValue
+
+Classname
+.attributeValue
+if classname has space - fill space with (.)
+
+attributes
+tagname[attr = value]
+
+and
+tagname[attr = value][attr = value]
+
+or
+tagname[attr = value],[attr = value]
+
+starts-with - ^
+tagname[attr^ = value]
+
+ends-with 
+tagname[attr$ = value]
+
+contains
+tagname[attr* = value]
+
+direct child
+tagname[attr = value]>tagname
+
+indirect child
+tagname[attr* = value] tagname
+
+siblings
++ 
+~
+
+nth-of-type()
+div[id='nav-xshop'] a:nth-of-type(3)
+
+nth-child()
+div[id='nav-xshop'] a:nth-child(3)
+
+first-of-type
+div[id='nav-xshop'] a:first-of-type()
+
+last-of-type
+div[id='nav-xshop'] a:last-of-type()
+
+not
+div[id='nav-xshop'] a:not([data-csa-c-slot-id="nav_cs_2"])
+div[id*='nav-xshop']>a:not([data-csa-c-slot-id="nav_cs_2"])
+
+* represents any tag
+*#nav-xshop

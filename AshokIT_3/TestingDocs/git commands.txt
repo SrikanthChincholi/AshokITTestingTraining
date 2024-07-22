@@ -1,0 +1,30 @@
+git init
+
+git add . - wa to sa
+
+git commit -m <msg>
+
+git remote add origin <<url>>
+
+git push -u origin master - Remote
+
+git status - get tracked and untracked file versions
+
+git pull origin master - get versions from github and save it 
+
+git branch <branchname> - create new branch
+ 
+git checkout <branchname> - switching between branches
+
+git merge <branchname> - merging data to master branch
+
+git branch --delete origin <branchname> - delete branch locally
+
+git push origin --delete <branchname> - delete branch remotely
+
+
+
+
+
+ 
+ 

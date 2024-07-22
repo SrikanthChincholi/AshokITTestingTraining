@@ -1,0 +1,90 @@
+Components used 
+
+> Standalone
+> Hub and Node
+
+Required servers
+
+Selenium standalone server
+
+Required browsers
+
+> ChromeDriver
+> Firefox
+
+Installation 
+
+> Go to Selenium.dev > Selenium Grid > download latest version
+> Go to Selenium.dev > platfrom supported by selenium > select required browsers > download required driver versions
+
+Create a Java class with setting up Desiredcapabilities and RemoteWebDriver
+
+eg - 
+public class GridConfig {
+
+	static DesiredCapabilities cap;
+	static RemoteWebDriver d;
+
+	public static void setupBrowser(String browser) throws MalformedURLException {
+		if (browser.equalsIgnoreCase("chrome")) {
+			cap = new DesiredCapabilities();
+			cap.setPlatform(Platform.ANY);
+			cap.setBrowserName("chrome");
+
+		} else if (browser.equalsIgnoreCase("firefox")) {
+			cap = new DesiredCapabilities();
+			cap.setPlatform(Platform.ANY);
+			cap.setBrowserName("firefox");
+		}
+
+		d = new RemoteWebDriver(new URL("http://localhost:4444"), cap);
+
+	}
+
+Create separate classes for chrome and firefox
+
+public class ChromeGridClass extends GridConfig {
+
+	@Test
+	public void getTitle1() throws MalformedURLException, InterruptedException {
+		setupBrowser("chrome");
+		d.manage().window().maximize();
+		d.get("https://www.google.com");
+		System.out.println(d.getTitle());
+		Thread.sleep(10000);
+		d.quit();
+	}
+	
+	
+	public class FirefoxGridClass extends GridConfig {
+
+	@Test
+	public void getTitle1() throws MalformedURLException, InterruptedException {
+		setupBrowser("firefox");
+		d.manage().window().maximize();
+		d.get("https://www.google.com");
+		System.out.println(d.getTitle());
+		Thread.sleep(10000);
+		d.quit();
+	}
+
+
+Configure Standalone grid
+
+Go to the location where selenium-server-<version>.jar is located
+open cmd and type below command
+
+> java -jar selenium-server-<version>.jar standalone
+
+Open browser > enter http://localhost:4444 and check for node
+
+Configure Hub and Node on the grid
+
+Go to the location where selenium-server-<version>.jar is located
+open cmd and type below command
+
+Hub - java -jar selenium-server-<version>.jar Hub
+Open browser > enter http://localhost:4444 and check for hub
+
+Node - java -jar selenium-server-<version>.jar node --port <portnumber>
+Open browser > enter http://localhost:4444 and check for node

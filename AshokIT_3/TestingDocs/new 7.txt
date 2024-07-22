@@ -1,0 +1,5 @@
+WAP to print marks of student of 10th standard
+
+subjects - marks
+
+
