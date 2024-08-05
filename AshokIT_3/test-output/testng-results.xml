@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-03T09:49:42 IST" name="Default suite" finished-at="2024-08-03T09:51:51 IST" duration-ms="128700">
+  <suite started-at="2024-08-05T08:18:01 IST" name="Default suite" finished-at="2024-08-05T08:18:13 IST" duration-ms="12020">
     <groups>
     </groups>
-    <test started-at="2024-08-03T09:49:42 IST" name="Default test" finished-at="2024-08-03T09:51:51 IST" duration-ms="128700">
-      <class name="selenium.MainClass">
-        <test-method signature="test()[pri:0, instance:selenium.MainClass@5d534f5d]" started-at="2024-08-03T09:49:42 IST" name="test" finished-at="2024-08-03T09:51:51 IST" duration-ms="128627" status="PASS">
+    <test started-at="2024-08-05T08:18:01 IST" name="Default test" finished-at="2024-08-05T08:18:13 IST" duration-ms="12020">
+      <class name="handlingwebelements.AutoComplete">
+        <test-method signature="autoComplete()[pri:0, instance:handlingwebelements.AutoComplete@3cebbb30]" started-at="2024-08-05T08:18:01 IST" name="autoComplete" finished-at="2024-08-05T08:18:13 IST" duration-ms="11949" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- selenium.MainClass -->
+        </test-method> <!-- autoComplete -->
+      </class> <!-- handlingwebelements.AutoComplete -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

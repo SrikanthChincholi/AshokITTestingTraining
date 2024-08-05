@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium.MainClass">
+      <class name="handlingwebelements.AutoComplete">
         <methods>
-          <include name="test"/>
+          <include name="autoComplete"/>
         </methods>
-      </class> <!-- selenium.MainClass -->
+      </class> <!-- handlingwebelements.AutoComplete -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
