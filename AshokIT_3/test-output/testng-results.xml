@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-05T08:18:01 IST" name="Default suite" finished-at="2024-08-05T08:18:13 IST" duration-ms="12020">
+  <suite started-at="2024-08-06T08:09:25 IST" name="Default suite" finished-at="2024-08-06T08:09:42 IST" duration-ms="16911">
     <groups>
     </groups>
-    <test started-at="2024-08-05T08:18:01 IST" name="Default test" finished-at="2024-08-05T08:18:13 IST" duration-ms="12020">
-      <class name="handlingwebelements.AutoComplete">
-        <test-method signature="autoComplete()[pri:0, instance:handlingwebelements.AutoComplete@3cebbb30]" started-at="2024-08-05T08:18:01 IST" name="autoComplete" finished-at="2024-08-05T08:18:13 IST" duration-ms="11949" status="PASS">
+    <test started-at="2024-08-06T08:09:25 IST" name="Default test" finished-at="2024-08-06T08:09:42 IST" duration-ms="16911">
+      <class name="frames.NestedFrame">
+        <test-method signature="testNestedFrames()[pri:0, instance:frames.NestedFrame@12aba8be]" started-at="2024-08-06T08:09:26 IST" name="testNestedFrames" finished-at="2024-08-06T08:09:42 IST" duration-ms="16814" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- autoComplete -->
-      </class> <!-- handlingwebelements.AutoComplete -->
+        </test-method> <!-- testNestedFrames -->
+      </class> <!-- frames.NestedFrame -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

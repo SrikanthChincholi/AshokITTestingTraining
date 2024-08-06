@@ -33,10 +33,9 @@ public class AutoComplete {
 					}
 				}
 			} else {
-				String s = new MyException().toString();
-				System.out.println(s);
+				throw new MyException("No options found !!");
 			}
-		} catch (Exception e) {
+		} catch (MyException e) {
 			System.out.println(e.getMessage());
 		} finally {
 			d.quit();

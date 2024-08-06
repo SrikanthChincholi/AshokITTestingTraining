@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="handlingwebelements.AutoComplete">
+      <class name="frames.NestedFrame">
         <methods>
-          <include name="autoComplete"/>
+          <include name="testNestedFrames"/>
         </methods>
-      </class> <!-- handlingwebelements.AutoComplete -->
+      </class> <!-- frames.NestedFrame -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
