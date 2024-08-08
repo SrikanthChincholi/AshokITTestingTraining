@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-06T08:09:25 IST" name="Default suite" finished-at="2024-08-06T08:09:42 IST" duration-ms="16911">
+  <suite started-at="2024-08-08T07:35:58 IST" name="Default suite" finished-at="2024-08-08T07:36:35 IST" duration-ms="37442">
     <groups>
     </groups>
-    <test started-at="2024-08-06T08:09:25 IST" name="Default test" finished-at="2024-08-06T08:09:42 IST" duration-ms="16911">
-      <class name="frames.NestedFrame">
-        <test-method signature="testNestedFrames()[pri:0, instance:frames.NestedFrame@12aba8be]" started-at="2024-08-06T08:09:26 IST" name="testNestedFrames" finished-at="2024-08-06T08:09:42 IST" duration-ms="16814" status="PASS">
+    <test started-at="2024-08-08T07:35:58 IST" name="Default test" finished-at="2024-08-08T07:36:35 IST" duration-ms="37442">
+      <class name="selenium.Alerts">
+        <test-method signature="alert3()[pri:0, instance:selenium.Alerts@67f639d3]" started-at="2024-08-08T07:35:58 IST" name="alert3" finished-at="2024-08-08T07:36:35 IST" duration-ms="37355" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNestedFrames -->
-      </class> <!-- frames.NestedFrame -->
+        </test-method> <!-- alert3 -->
+      </class> <!-- selenium.Alerts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
