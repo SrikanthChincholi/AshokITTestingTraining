@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium.Alerts">
+      <class name="timeouts.SyncClass">
         <methods>
-          <include name="alert1"/>
+          <include name="fluentWaitEx1"/>
         </methods>
-      </class> <!-- selenium.Alerts -->
+      </class> <!-- timeouts.SyncClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

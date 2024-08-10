@@ -1,12 +1,17 @@
 package selenium;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 public class HandlingElements {
 
@@ -99,8 +104,20 @@ public class HandlingElements {
 					break;
 				}
 			}
-
 		}
+	}
+
+	public static WebElement fleuntWaitforElement1(By by) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(d);
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+
+	}
+
+	public static Wait<WebDriver> fleuntWaitforElement2(By by) {
+
+		return new FluentWait<WebDriver>(d).pollingEvery(Duration.ofMillis(500)).withTimeout(Duration.ofSeconds(30))
+				.ignoring(ElementClickInterceptedException.class);
+
 	}
 
 }

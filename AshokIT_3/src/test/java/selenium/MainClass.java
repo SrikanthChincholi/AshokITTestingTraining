@@ -1,8 +1,12 @@
 package selenium;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.Test;
 
 import collectionprgms.ReadDataFromExcelToListMap;
@@ -20,10 +24,13 @@ public class MainClass extends HandlingElements {
 			// Please enter F or f for Female / enter M or m for Male
 			selectGender(gender);
 			waitForSecs(3);
-		//	selectLang(lang);
+			selectLang(lang);
 			waitForSecs(3);
 			tearDown();
 		}
+		
+		
+		
 
 	}
 
