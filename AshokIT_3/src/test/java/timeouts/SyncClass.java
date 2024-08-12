@@ -2,8 +2,10 @@ package timeouts;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -102,16 +104,40 @@ public class SyncClass {
 		// d.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
 		d.get("https://www.letskodeit.com/practice");
 		d.findElement(By.xpath("//input[@value='Hide']")).click();
-		WebElement txtboxpresence = fluentwait(By.xpath("//input[@placeholder='Hide/Show Example']"), 10, 2);
-		txtboxpresence.sendKeys("TestSample");
+		WebElement txtboxpresence = fluentwaitPresenceOfElement(By.xpath("//input[@placeholder='Hide/Show Example']"), 10, 2);
+		d.findElement(By.xpath("//input[@value='Show']")).click();
+		txtboxpresence = fluentwaitforVisibilityOfElement(By.xpath("//input[@placeholder='Hide/Show Example']"), 10, 2);
+		txtboxpresence.sendKeys("Test Sample");
+		String txt = txtboxpresence.getAttribute("value");
+		System.out.println(txt);
 		// d.quit();
 	}
 
-	public WebElement fluentwait(By by, int waitforSec, int polltime) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(d).withTimeout(Duration.ofSeconds(waitforSec))
-				.pollingEvery(Duration.ofSeconds(polltime)).ignoring(ElementNotInteractableException.class)
-				.withMessage("Failed to find the element");
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+	public WebElement fluentwaitPresenceOfElement(By by, int timeout, int poolingtime) {
+		Wait<WebDriver> fwait = new FluentWait<WebDriver>(d).withTimeout(Duration.ofSeconds(timeout))
+				.pollingEvery(Duration.ofSeconds(poolingtime)).ignoring(NoSuchElementException.class)
+				.ignoring(ElementClickInterceptedException.class)
+				.withMessage("Element not present");
+		return fwait.until(ExpectedConditions.presenceOfElementLocated(by));
+		}
+	
+	public WebElement fluentwaitforVisibilityOfElement(By by, int timeout, int poolingtime) {
+		Wait<WebDriver> fwait = new FluentWait<WebDriver>(d).withTimeout(Duration.ofSeconds(timeout))
+				.pollingEvery(Duration.ofSeconds(poolingtime)).ignoring(NoSuchElementException.class)
+				.ignoring(ElementNotInteractableException.class)
+				.withMessage("Not able to interact with Element or No Element found");
+		return fwait.until(ExpectedConditions.visibilityOfElementLocated(by));
 	}
+
+
+	/*
+	 * public WebElement fluentwait(By by, int waitforSec, int polltime) {
+	 * Wait<WebDriver> wait = new
+	 * FluentWait<WebDriver>(d).withTimeout(Duration.ofSeconds(waitforSec))
+	 * .pollingEvery(Duration.ofSeconds(polltime)).ignoring(
+	 * ElementNotInteractableException.class)
+	 * .withMessage("Failed to find the element"); return
+	 * wait.until(ExpectedConditions.visibilityOfElementLocated(by)); }
+	 */
 
 }

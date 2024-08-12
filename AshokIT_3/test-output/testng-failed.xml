@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="timeouts.SyncClass">
+      <class name="handlingwindows.WindowHandles">
         <methods>
-          <include name="fluentWaitEx1"/>
+          <include name="wndHandle"/>
         </methods>
-      </class> <!-- timeouts.SyncClass -->
+      </class> <!-- handlingwindows.WindowHandles -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

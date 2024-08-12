@@ -2,28 +2,44 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-10T09:10:37 IST" name="Default suite" finished-at="2024-08-10T09:10:59 IST" duration-ms="21168">
+  <suite started-at="2024-08-12T09:28:15 IST" name="Default suite" finished-at="2024-08-12T09:28:40 IST" duration-ms="24138">
     <groups>
     </groups>
-    <test started-at="2024-08-10T09:10:37 IST" name="Default test" finished-at="2024-08-10T09:10:59 IST" duration-ms="21168">
-      <class name="timeouts.SyncClass">
-        <test-method signature="fluentWaitEx1()[pri:0, instance:timeouts.SyncClass@1b11171f]" started-at="2024-08-10T09:10:38 IST" name="fluentWaitEx1" finished-at="2024-08-10T09:10:59 IST" duration-ms="21093" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+    <test started-at="2024-08-12T09:28:15 IST" name="Default test" finished-at="2024-08-12T09:28:40 IST" duration-ms="24138">
+      <class name="handlingwindows.WindowHandles">
+        <test-method signature="wndHandle()[pri:0, instance:handlingwindows.WindowHandles@12aba8be]" started-at="2024-08-12T09:28:16 IST" name="wndHandle" finished-at="2024-08-12T09:28:40 IST" duration-ms="24031" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[Expected condition failed: Failed to find the element (tried for 10 second(s) with 2000 milliseconds interval)
+              <![CDATA[invalid session id
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: driver.version: unknown]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [98a4c6b5ba783f03716cd2de66b8a48b, switchToWindow {handle=255E54C16661F795A07706694B54F96F}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59355}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59355/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 98a4c6b5ba783f03716cd2de66b8a48b]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: Failed to find the element (tried for 10 second(s) with 2000 milliseconds interval)
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at timeouts.SyncClass.fluentwait(SyncClass.java:114)
-at timeouts.SyncClass.fluentWaitEx1(SyncClass.java:105)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [98a4c6b5ba783f03716cd2de66b8a48b, switchToWindow {handle=255E54C16661F795A07706694B54F96F}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.100, chrome: {chromedriverVersion: 127.0.6533.99 (f31af5097d90..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59355}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59355/devtoo..., se:cdpVersion: 127.0.6533.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 98a4c6b5ba783f03716cd2de66b8a48b
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:1118)
+at handlingwindows.WindowHandles.wndHandle(WindowHandles.java:45)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,11 +70,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fluentWaitEx1 -->
-      </class> <!-- timeouts.SyncClass -->
+        </test-method> <!-- wndHandle -->
+      </class> <!-- handlingwindows.WindowHandles -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

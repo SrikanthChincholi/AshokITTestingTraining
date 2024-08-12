@@ -113,8 +113,7 @@ public class HandlingElements {
 
 	}
 
-	public static Wait<WebDriver> fleuntWaitforElement2(By by) {
-
+	private static Wait<WebDriver> fleuntWaitforElement2(By by) {
 		return new FluentWait<WebDriver>(d).pollingEvery(Duration.ofMillis(500)).withTimeout(Duration.ofSeconds(30))
 				.ignoring(ElementClickInterceptedException.class);
 
