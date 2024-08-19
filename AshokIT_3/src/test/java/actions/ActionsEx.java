@@ -1,6 +1,8 @@
 package actions;
 
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
@@ -154,11 +156,13 @@ public class ActionsEx {
 
 	}
 
-	//@Test
+	@Test
 	public void dragAndDropElement() {
 		getUrl("https://jqueryui.com/droppable/");
 		switchToFrame(0);
-		WebElement drag = findElement(By.xpath("//div[@id='draggable']"));
+		//WebElement drag = findElement(By.xpath("//div[@id='draggable']"));
+		JavascriptExecutor js = (JavascriptExecutor)d;
+		WebElement drag = (WebElement) js.executeScript("return document.getElementById('draggable')");
 		WebElement drop = findElement(By.xpath("//div[@id='droppable']"));
 		Actions actions = act();
 		waitforSeconds(2);
@@ -168,7 +172,7 @@ public class ActionsEx {
 		System.out.println(txt.getText());
 	}
 	
-	@Test
+	//@Test
 	public void scroll()
 	{
 		getUrl("https://www.amazon.in/");
