@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="javaexecutorExamples.JSExampleForSelenium">
+      <class name="exceldatareading.ReadExcelData">
         <methods>
-          <include name="identifyElewithXpath"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- javaexecutorExamples.JSExampleForSelenium -->
+      </class> <!-- exceldatareading.ReadExcelData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

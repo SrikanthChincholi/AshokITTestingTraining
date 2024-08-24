@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-21T09:07:07 IST" name="Default suite" finished-at="2024-08-21T09:07:18 IST" duration-ms="11701">
+  <suite started-at="2024-08-24T08:57:55 IST" name="Default suite" finished-at="2024-08-24T08:57:57 IST" duration-ms="1674">
     <groups>
     </groups>
-    <test started-at="2024-08-21T09:07:07 IST" name="Default test" finished-at="2024-08-21T09:07:18 IST" duration-ms="11701">
-      <class name="javaexecutorExamples.JSExampleForSelenium">
-        <test-method signature="executeScripts()[pri:0, instance:javaexecutorExamples.JSExampleForSelenium@7d4f9aae]" started-at="2024-08-21T09:07:07 IST" name="executeScripts" finished-at="2024-08-21T09:07:18 IST" duration-ms="11628" status="PASS">
+    <test started-at="2024-08-24T08:57:55 IST" name="Default test" finished-at="2024-08-24T08:57:57 IST" duration-ms="1674">
+      <class name="collectionprgms.ReadDataFromExcelToListMap">
+        <test-method signature="readDataFromExcelToListMap()[pri:0, instance:collectionprgms.ReadDataFromExcelToListMap@3cebbb30]" started-at="2024-08-24T08:57:55 IST" name="readDataFromExcelToListMap" finished-at="2024-08-24T08:57:57 IST" duration-ms="1593" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- executeScripts -->
-      </class> <!-- javaexecutorExamples.JSExampleForSelenium -->
+        </test-method> <!-- readDataFromExcelToListMap -->
+      </class> <!-- collectionprgms.ReadDataFromExcelToListMap -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
