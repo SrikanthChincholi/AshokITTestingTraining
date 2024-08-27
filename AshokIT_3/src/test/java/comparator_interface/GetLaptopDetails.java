@@ -7,8 +7,7 @@ import java.util.List;
 public class GetLaptopDetails implements Comparator<LaptopDetails> {
 
 	public static void main(String[] args) {
-		Laptops laptops = new Laptops();
-		List<LaptopDetails> laps = laptops.getDetails();
+		List<LaptopDetails> laps = new Laptops().getDetails();
 		Collections.sort(laps, new GetLaptopDetails());
 		System.out.println(laps.toString());
 	}

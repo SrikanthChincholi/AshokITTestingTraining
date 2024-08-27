@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-24T08:57:55 IST" name="Default suite" finished-at="2024-08-24T08:57:57 IST" duration-ms="1674">
+  <suite started-at="2024-08-27T08:53:19 IST" name="Default suite" finished-at="2024-08-27T08:53:55 IST" duration-ms="35680">
     <groups>
     </groups>
-    <test started-at="2024-08-24T08:57:55 IST" name="Default test" finished-at="2024-08-24T08:57:57 IST" duration-ms="1674">
-      <class name="collectionprgms.ReadDataFromExcelToListMap">
-        <test-method signature="readDataFromExcelToListMap()[pri:0, instance:collectionprgms.ReadDataFromExcelToListMap@3cebbb30]" started-at="2024-08-24T08:57:55 IST" name="readDataFromExcelToListMap" finished-at="2024-08-24T08:57:57 IST" duration-ms="1593" status="PASS">
+    <test started-at="2024-08-27T08:53:19 IST" name="Default test" finished-at="2024-08-27T08:53:55 IST" duration-ms="35680">
+      <class name="exceldatareading.TestLoginClass">
+        <test-method signature="login()[pri:0, instance:exceldatareading.TestLoginClass@12aba8be]" started-at="2024-08-27T08:53:19 IST" name="login" finished-at="2024-08-27T08:53:55 IST" duration-ms="35604" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- readDataFromExcelToListMap -->
-      </class> <!-- collectionprgms.ReadDataFromExcelToListMap -->
+        </test-method> <!-- login -->
+      </class> <!-- exceldatareading.TestLoginClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
