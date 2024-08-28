@@ -1,0 +1,8 @@
+<suite name="suite">
+	<test name="test1">
+		<classes>
+			<class name="testngFramework.AnnotationsClass" />
+			<!-- <class name="testngFramework.AnnotationsClass1" /> -->
+		</classes>
+	</test>
+</suite>

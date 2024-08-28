@@ -1,0 +1,10 @@
+<suite name="suite">
+	<test name="test1">
+		<classes>
+			<class name="testngFramework.Selenium_TestNG" />
+			<methods>
+				<exclude name="test2"/>
+			</methods>
+		</classes>
+	</test>
+</suite>
