@@ -7,7 +7,7 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="testngFramework.Selenium_TestNG2" />
+			<class name="testngFramework.Selenium_TestNG" />
 		</classes>
 	</test>
 </suite>
