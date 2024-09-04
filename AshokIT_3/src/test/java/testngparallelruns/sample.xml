@@ -1,0 +1,16 @@
+<suite name="suite" parallel="tests" thread-count="3">
+	<parameter name="Url"
+		value="https://demo.automationtesting.in/Register.html" />
+	<test name="test1">
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="testngparallelruns.Selenium_TestNG" />
+		</classes>
+	</test>
+	<test name="test2">
+		<parameter name="browser" value="Edge" />
+		<classes>
+			<class name="testngparallelruns.Selenium_TestNG2" />
+		</classes>
+	</test>
+</suite>

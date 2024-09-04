@@ -1,57 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="test1(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <groups>
-      <run>
-        <include name="Smoke"/>
-      </run>
-    </groups>
+<suite thread-count="2" parallel="tests" name="Failed suite [suite]">
+  <parameter name="Url" value="https://demo.automationtesting.in/Register.html"/>
+  <test thread-count="2" parallel="tests" name="test1(failed)">
+    <parameter name="browser" value="Firefox"/>
     <classes>
-      <class name="testngFramework.Selenium_TestNG2">
+      <class name="testngparallelruns.Selenium_TestNG">
         <methods>
-          <include name="bmeth"/>
           <include name="tearDown"/>
+          <include name="bmeth"/>
           <include name="test1"/>
-          <include name="test3"/>
         </methods>
-      </class> <!-- testngFramework.Selenium_TestNG2 -->
+      </class> <!-- testngparallelruns.Selenium_TestNG -->
     </classes>
   </test> <!-- test1(failed) -->
-  <test thread-count="5" name="test2(failed)">
-    <parameter name="browser" value="Edge"/>
-    <groups>
-      <run>
-        <include name="Regression"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="testngFramework.Selenium_TestNG2">
-        <methods>
-          <include name="bmeth"/>
-          <include name="test2"/>
-          <include name="tearDown"/>
-          <include name="test3"/>
-        </methods>
-      </class> <!-- testngFramework.Selenium_TestNG2 -->
-    </classes>
-  </test> <!-- test2(failed) -->
-  <test thread-count="5" name="test3(failed)">
-    <groups>
-      <run>
-        <include name="Regression"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="testngFramework.Selenium_TestNG2">
-        <methods>
-          <include name="bmeth"/>
-          <include name="test2"/>
-          <include name="tearDown"/>
-          <include name="test3"/>
-        </methods>
-      </class> <!-- testngFramework.Selenium_TestNG2 -->
-    </classes>
-  </test> <!-- test3(failed) -->
 </suite> <!-- Failed suite [suite] -->

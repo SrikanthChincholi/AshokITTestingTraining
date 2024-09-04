@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="javaprgms.RotateAnArray">
+      <class name="dprovidertestng.DataProviderTestClass">
         <methods>
-          <include name="test"/>
+          <include name="readData"/>
         </methods>
-      </class> <!-- javaprgms.RotateAnArray -->
+      </class> <!-- dprovidertestng.DataProviderTestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,13 @@
+<suite name="suite">
+	<test name="test1">
+	 	<groups>
+			<dependencies>
+				<group name="test2" depends-on="test1"></group>
+			</dependencies>
+		</groups> 
+		<classes>
+
+			<class name="testngFramework.Selenium_TestNG_Priorty" />
+		</classes>
+	</test>
+</suite>
