@@ -26,6 +26,7 @@ public class DataProviderTestClass {
 		list.add("admin");
 		list.add("admin123");
 		return list.iterator();
+		
 	}
 	
 	@DataProvider(name="DP4")

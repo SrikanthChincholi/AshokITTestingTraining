@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="dprovidertestng.DataProviderTestClass">
+      <class name="dprovidertestng.TestLogin">
         <methods>
-          <include name="readData"/>
+          <include name="tearDown"/>
+          <include name="testLogin" invocation-numbers="0 1 2"/>
+          <include name="bmeth"/>
         </methods>
-      </class> <!-- dprovidertestng.DataProviderTestClass -->
+      </class> <!-- dprovidertestng.TestLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

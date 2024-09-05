@@ -2,45 +2,69 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-04T09:15:44 IST" name="Default suite" finished-at="2024-09-04T09:15:44 IST" duration-ms="99">
+  <suite started-at="2024-09-05T09:48:10 IST" name="Default suite" finished-at="2024-09-05T09:48:45 IST" duration-ms="35276">
     <groups>
     </groups>
-    <test started-at="2024-09-04T09:15:44 IST" name="Default test" finished-at="2024-09-04T09:15:44 IST" duration-ms="99">
-      <class name="dprovidertestng.DataProviderTestClass">
-        <test-method signature="readData([Ljava.lang.String;)[pri:0, instance:dprovidertestng.DataProviderTestClass@4b0d79fc]" started-at="2024-09-04T09:15:44 IST" name="readData" data-provider="DP4" finished-at="2024-09-04T09:15:44 IST" duration-ms="9" status="PASS">
+    <test started-at="2024-09-05T09:48:10 IST" name="Default test" finished-at="2024-09-05T09:48:45 IST" duration-ms="35276">
+      <class name="dprovidertestng.TestLogin">
+        <test-method is-config="true" signature="bmeth()[pri:0, instance:dprovidertestng.TestLogin@1151e434]" started-at="2024-09-05T09:48:12 IST" name="bmeth" finished-at="2024-09-05T09:48:18 IST" duration-ms="6352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmeth -->
+        <test-method signature="testLogin(java.util.Map)[pri:0, instance:dprovidertestng.TestLogin@1151e434]" started-at="2024-09-05T09:48:18 IST" name="testLogin" data-provider="DPFromListOfMap" finished-at="2024-09-05T09:48:18 IST" duration-ms="214" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@7d3e8655]]>
+                <![CDATA[{Run=No, Username=admin, Password=admin123, isActive=true, Emp_Num=123, Sal=₹ 25,000.00}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- readData -->
-        <test-method signature="readData([Ljava.lang.String;)[pri:0, instance:dprovidertestng.DataProviderTestClass@4b0d79fc]" started-at="2024-09-04T09:15:44 IST" name="readData" data-provider="DP4" finished-at="2024-09-04T09:15:44 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dprovidertestng.TestLogin@1151e434]" started-at="2024-09-05T09:48:18 IST" name="tearDown" finished-at="2024-09-05T09:48:18 IST" duration-ms="213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="bmeth()[pri:0, instance:dprovidertestng.TestLogin@1151e434]" started-at="2024-09-05T09:48:18 IST" name="bmeth" finished-at="2024-09-05T09:48:23 IST" duration-ms="4966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmeth -->
+        <test-method signature="testLogin(java.util.Map)[pri:0, instance:dprovidertestng.TestLogin@1151e434]" started-at="2024-09-05T09:48:23 IST" name="testLogin" data-provider="DPFromListOfMap" finished-at="2024-09-05T09:48:24 IST" duration-ms="196" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@7bbc8656]]>
+                <![CDATA[{Run=No, Username=admin1, Password=admin123, isActive=false, Emp_Num=345, Sal=₹ 34,500.00}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- readData -->
-        <test-method signature="readData([Ljava.lang.String;)[pri:0, instance:dprovidertestng.DataProviderTestClass@4b0d79fc]" started-at="2024-09-04T09:15:44 IST" name="readData" data-provider="DP4" finished-at="2024-09-04T09:15:44 IST" duration-ms="11" status="PASS">
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dprovidertestng.TestLogin@1151e434]" started-at="2024-09-05T09:48:24 IST" name="tearDown" finished-at="2024-09-05T09:48:24 IST" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="bmeth()[pri:0, instance:dprovidertestng.TestLogin@1151e434]" started-at="2024-09-05T09:48:24 IST" name="bmeth" finished-at="2024-09-05T09:48:29 IST" duration-ms="4718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmeth -->
+        <test-method signature="testLogin(java.util.Map)[pri:0, instance:dprovidertestng.TestLogin@1151e434]" started-at="2024-09-05T09:48:29 IST" name="testLogin" data-provider="DPFromListOfMap" finished-at="2024-09-05T09:48:45 IST" duration-ms="16302" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@6933b6c6]]>
+                <![CDATA[{Run=Yes, Username=admin, Password=admin345, isActive=false, Emp_Num=567, Sal=₹ 45,000.00}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- readData -->
-      </class> <!-- dprovidertestng.DataProviderTestClass -->
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dprovidertestng.TestLogin@1151e434]" started-at="2024-09-05T09:48:45 IST" name="tearDown" finished-at="2024-09-05T09:48:45 IST" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- dprovidertestng.TestLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
