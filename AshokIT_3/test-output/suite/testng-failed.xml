@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [suite]">
-  <parameter name="Url" value="https://demo.automationtesting.in/Register.html"/>
-  <test thread-count="2" parallel="tests" name="test1(failed)">
-    <parameter name="browser" value="Firefox"/>
+<suite data-provider-thread-count="2" name="Failed suite [suite]">
+  <test thread-count="5" name="test1(failed)">
     <classes>
-      <class name="testngparallelruns.Selenium_TestNG">
+      <class name="dprovidertestng.TestLogin">
         <methods>
           <include name="tearDown"/>
+          <include name="testLogin" invocation-numbers="0 1 2"/>
           <include name="bmeth"/>
-          <include name="test1"/>
         </methods>
-      </class> <!-- testngparallelruns.Selenium_TestNG -->
+      </class> <!-- dprovidertestng.TestLogin -->
     </classes>
   </test> <!-- test1(failed) -->
 </suite> <!-- Failed suite [suite] -->

@@ -28,7 +28,7 @@ public class ExcelData {
 	static String filepath = ".\\DataFiles\\DataFile.xlsx";
 	static FileInputStream fis;
 
-	@DataProvider(name = "ExcelDataFromPOI")
+	@DataProvider(name = "ExcelDataFromPOI", parallel = true)
 	public static Object[][] getDataFromExcel() throws Exception {
 		fis = new FileInputStream(filepath);
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
@@ -47,7 +47,7 @@ public class ExcelData {
 		return Objdata;
 	}
 
-	@DataProvider(name="DPFromListOfMap")
+	@DataProvider(name="DPFromListOfMap",parallel = true)
 	public static Iterator<Map<String, String>> getDataUsingFillo() throws Exception {
 		List<Map<String, String>> list = new ArrayList<>();
 		Fillo fillo = new Fillo();

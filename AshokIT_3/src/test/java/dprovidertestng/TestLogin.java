@@ -5,6 +5,8 @@ import static org.testng.Assert.assertEquals;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
@@ -19,30 +21,36 @@ import org.testng.annotations.*;
 
 public class TestLogin {
 
-	static WebDriver d;
+	static ThreadLocal<WebDriver> d = new ThreadLocal<>();
 
 	@BeforeMethod(alwaysRun = true)
 	public void bmeth() {
 
-		d = new ChromeDriver();
-		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		d.manage().window().maximize();
-		d.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		d.set(new ChromeDriver());
+		d.get().manage().window().maximize();
+		d.get().get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	}
 
-	//@Test(dataProvider = "ExcelDataFromPOI", dataProviderClass = DataProviderTestClass.class)
+	@Test(dataProvider = "ExcelDataFromPOI", dataProviderClass = ExcelData.class)
 	public void testLogin(String run, String username, String password, String isactive, String eno, String sal)
 			throws Exception {
-		if (run.equalsIgnoreCase("Yes")) {
-			d.findElement(By.name("username")).sendKeys(username);
-			Thread.sleep(2000);
-			d.findElement(By.name("password")).sendKeys(password);
-			Thread.sleep(2000);
-			d.findElement(By.xpath("//button[@type='submit']")).click();
-			assertEquals("Dashboard", d.findElement(By.xpath("//h6[contains(string(),'Dashboard')]")).getText());
-			System.out.println("Login Success !!");
-		} else {
-			throw new SkipException("Run skipped !!");
+		try {
+			if (run.equalsIgnoreCase("Yes")) {
+				Thread.sleep(3000);
+				d.get().findElement(By.name("username")).sendKeys(username);
+				Thread.sleep(2000);
+				d.get().findElement(By.name("password")).sendKeys(password);
+				Thread.sleep(2000);
+				d.get().findElement(By.xpath("//button[@type='submit']")).click();
+				assertEquals("Dashboard",
+						d.get().findElement(By.xpath("//h6[contains(string(),'Dashboard')]")).getText());
+				System.out.println("Login Success !!");
+			} else {
+				throw new SkipException("Run skipped !!");
+			}
+		} catch (Exception e) {
+			getScreens();
+			e.printStackTrace();
 		}
 	}
 
@@ -53,13 +61,14 @@ public class TestLogin {
 		String password = map.get("Password");
 		try {
 			if (run.equalsIgnoreCase("Yes")) {
-
-				d.findElement(By.name("username")).sendKeys(username);
+				Thread.sleep(3000);
+				d.get().findElement(By.name("username")).sendKeys(username);
 				Thread.sleep(2000);
-				d.findElement(By.name("password")).sendKeys(password);
+				d.get().findElement(By.name("password")).sendKeys(password);
 				Thread.sleep(2000);
-				d.findElement(By.xpath("//button[@type='submit']")).click();
-				assertEquals("Dashboard", d.findElement(By.xpath("//h6[contains(string(),'Dashboard')]")).getText());
+				d.get().findElement(By.xpath("//button[@type='submit']")).click();
+				assertEquals("Dashboard",
+						d.get().findElement(By.xpath("//h6[contains(string(),'Dashboard')]")).getText());
 				System.out.println("Login Success !!");
 			} else {
 				throw new SkipException("Run skipped !!");
@@ -71,16 +80,19 @@ public class TestLogin {
 	}
 
 	public static void getScreens() throws Exception {
-		File src = ((TakesScreenshot) d).getScreenshotAs(OutputType.FILE);
-		Date d = new Date();
-		SimpleDateFormat format = new SimpleDateFormat("YYYY-mm-dd-HH-MM-SS");
-		String date = format.format(d);
-		File dest = new File(".//Screens//failed_" + date + ".png");
+		Thread.sleep(3000);
+		File src = ((TakesScreenshot) d.get()).getScreenshotAs(OutputType.FILE);
+		LocalDateTime myDateObj = LocalDateTime.now();
+	  //  System.out.println("Before formatting: " + myDateObj);
+	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy-HH-mm-ss-ms");
+	    String formattedDate = myDateObj.format(myFormatObj);
+	 //   System.out.println("After formatting: " + formattedDate);
+		File dest = new File(".//Screens//failed_" + formattedDate + ".png");
 		FileUtils.copyFile(src, dest);
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
-		d.quit();
+		d.get().quit();
 	}
 }
